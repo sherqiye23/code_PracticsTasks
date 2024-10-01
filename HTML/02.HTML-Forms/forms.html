@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>Register</h1>
+    <form>
+
+        <label for="name">Adiniz:</label>
+        <input type="text" name="name">
+        <label for="surname">Soyadiniz:</label>
+        <input type="text" name="surmane">
+        
+        <br><br>
+
+        <p>Cinsiyyet: </p>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Kishi</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Qadin</label>
+
+        <br><br>
+
+        <label for="birth">Doghum gununuzu qeyd edin. </label>
+        <input type="date" name="birth" id="birth">
+
+        <br><br>
+
+        <label for="age">Yashinizi qeyd edin: </label>
+        <input type="number" name="age" id="age">
+
+        <br><br>
+
+        <p>Hansi dilleri bilirsiniz?</p>
+        <input type="checkbox" name="language" id="ingilis">
+        <label for="ingilis">Ingilis dili</label>
+        <input type="checkbox" name="language" id="fransiz">
+        <label for="fransiz">Fransiz dili</label>
+        <input type="checkbox" name="language" id="alman">
+        <label for="alman">Alman dili</label>
+
+        <br><br>
+
+        <label for="developments">Muraciet etmek istediyiniz saheni secin: </label>
+        <select name="developments" id="developments">
+            <option value="front">Frontend Development</option>
+            <option value="back">Backend Development</option>
+        </select>
+
+        <br><br>
+
+        <label for="image">Shekilinizi elave edin: </label>
+        <input type="file" name="image" id="image">
+
+        <br><br>
+
+        <label for="meet">Sizinle meet olunmasini istediyiniz saati sechin: </label>
+        <input type="time" name="meet" id="meet">
+
+        <br><br>
+
+        <label for="color">Sevdiyiniz reng hansidir? </label>
+        <input type="color" name="color" id="color">
+
+        <br><br>
+
+        <p>Ozunuz haqqinda etrafli melumat yazin: </p>
+        <textarea name="text" id="text" placeholder="Message"></textarea>
+
+        <br><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Gonder">
+
+    </form>
+    
+</body>
+</html>
