@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .border {
+            margin: 10px;
+            padding: 30px;
+            border: 2px solid purple;
+        }
+
+        span {
+            border: 2px solid blue;
+            padding: 15px;
+            margin: -4px;
+            display: inline-block;  
+        }
+
+        .words {
+            border: 2px solid blue;
+            padding: 20px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="border">
+            <p>I am a paragraph. A short one.</p>
+        </div>
+
+        <div class="border gap">
+            <span><p>Item One</p></span>
+            <span><p>Item Two</p></span>
+            <span><p>Item Three</p></span>
+        </div>
+
+        <div class="border">
+            <p>I am another paragraph 
+                <div class="words"><p>words</p></div>
+                have been wrapped  in a span element.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

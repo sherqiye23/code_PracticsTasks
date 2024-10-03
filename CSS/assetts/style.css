@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(204, 204, 204);
+    box-sizing: border-box;
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+    padding: 50px;
+    border: 15px solid green;
+}
+
+.container p {
+    font-size: 20px;
+}
