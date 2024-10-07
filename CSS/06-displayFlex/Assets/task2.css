@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+
+    .header {
+        box-shadow: 5px 10px 20px rgb(190, 190, 190);
+        border: 1px solid rgb(190, 190, 190);
+        display: flex;
+        padding: 10px 30px;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: #000;
+            letter-spacing: 5px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        a:hover {
+            background-color: #cacaca;
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+main {
+
+    /* Architects */
+    .architects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        .text-logo {
+            position: absolute;
+            font-size: 50px;
+            color: #fff;
+
+            .br {
+                padding: 15px;
+                background-color: #000;
+                opacity: .7;
+            }
+        }
+    }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+    }
+
+
+}
