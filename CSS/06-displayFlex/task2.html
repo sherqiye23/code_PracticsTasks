@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>W3.CSS Template</title>
     <link rel="stylesheet" href="./Assets/task2.css">
+    <link rel="stylesheet" href="./Assets/grid.css">
 </head>
+
 <body>
 
+    <!-- Header -->
     <header>
-        <div class="header"> <!--fixed-->
+        <div class="header">
             <div class="logo">
-                <a href="#architects"><strong>BR</strong> Architects</a>
+                <a href="#architects"><span class="bold">BR</span> Architects</a>
             </div>
             <div class="nav">
                 <a href="#projects">Projects</a>
@@ -21,96 +25,212 @@
         </div>
     </header>
 
+    <!-- Main -->
     <main>
-        <!-- Architects -->
-        <section id="#architects">
-            <div class="architects">
+        <!-- Architects Section -->
+        <section id="architects">
+            <div id="architects" class="architects">
                 <div class="image">
                     <img src="https://www.w3schools.com/w3images/architect.jpg" alt="architects">
                 </div>
-                <div class="text-logo"><span class="br">BR</span> Architects</div> <!--absolute, relative-->
+                <div class="text-logo"><span class="bold">BR</span> Architects</div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section id="#projects"> <!--padding verib deye ustune basanda padding olan hisse dusur headerin altina-->
+        <section id="projects">
             <div class="projects">
-                <p>Projects</p>
-                <hr>
+                <div class="text">
+                    <p>Projects</p>
+                    <hr>
+                </div>
 
                 <div class="images">
+                    <!-- 1st Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house5.jpg" alt="Summer House">
                         </div>
-                        <div class="house-name">Summer House</div> <!--absolute, relative-->
+                        <div class="house-name">Summer House</div>
                     </div>
-    
+
+                    <!-- 2nd Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house2.jpg" alt="Brick House">
                         </div>
-                        <div class="house-name">Brick House</div> <!--absolute, relative-->
+                        <div class="house-name">Brick House</div>
                     </div>
-    
+
+                    <!-- 3th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house3.jpg" alt="Renovated">
                         </div>
-                        <div class="house-name">Renovated</div> <!--absolute, relative-->
+                        <div class="house-name">Renovated</div>
                     </div>
-    
+
+                    <!-- 4th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house4.jpg" alt="Barn House">
                         </div>
-                        <div class="house-name">Barn House</div> <!--absolute, relative-->
+                        <div class="house-name">Barn House</div>
                     </div>
-    
+
+                <!-- </div> -->
+
+                <!-- <div class="images"> -->
+                    <!-- 5th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house2.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house2.jpg" alt="Summer House">
                         </div>
-                        <div class="house-name">Summer House</div> <!--absolute, relative-->
+                        <div class="house-name">Summer House</div>
                     </div>
-    
+
+                    <!-- 6th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house5.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house5.jpg" alt="Brick House">
                         </div>
-                        <div class="house-name">Brick House</div> <!--absolute, relative-->
+                        <div class="house-name">Brick House</div>
                     </div>
-    
+
+                    <!-- 7th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house4.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house4.jpg" alt="Renovated">
                         </div>
-                        <div class="house-name">Renovated</div> <!--absolute, relative-->
+                        <div class="house-name">Renovated</div>
                     </div>
-    
+
+                    <!-- 8th Photo -->
                     <div class="houseImage-wrapper">
                         <div class="houseImage">
-                            <img src="https://www.w3schools.com/w3images/house3.jpg" alt="">
+                            <img src="https://www.w3schools.com/w3images/house3.jpg" alt="Barn House">
                         </div>
-                        <div class="house-name">Barn House</div> <!--absolute, relative-->
+                        <div class="house-name">Barn House</div>
                     </div>
-                    
-                </div>
                 </div>
 
-
+            </div>
         </section>
 
         <!-- About -->
         <section id="#about">
+            <div class="about">
+                <div class="text">
+                    <p>About</p>
+                    <hr>
+                    <p class="information">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
 
+                <div class="cards">
+                    <!-- Person 1 -->
+                    <div class="card">
+
+                        <div class="cardImage">
+                            <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John Doe">
+                        </div>
+
+                        <div class="info">
+                            <p class="name">John Doe</p>
+                            <p class="work">CEO & Founder</p>
+                            <div class="message">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </div>
+                        </div>
+
+                        <div class="btn"><button>Contact</button></div>
+
+                    </div>
+
+                    <!-- Person 2 -->
+                    <div class="card">
+                        <div class="cardImage">
+                            <img src="https://www.w3schools.com/w3images/team1.jpg" alt="John Doe">
+                        </div>
+
+                        <div class="info">
+                            <p class="name">Jane Doe</p>
+                            <p class="work">Architect</p>
+                            <div class="message">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </div>
+                        </div>
+
+                        <div class="btn"><button>Contact</button></div>
+                    </div>
+
+                    <!-- Person 3 -->
+                    <div class="card">
+                        <div class="cardImage">
+                            <img src="https://www.w3schools.com/w3images/team3.jpg" alt="John Doe">
+                        </div>
+
+                        <div class="info">
+                            <p class="name">Mike Ross</p>
+                            <p class="work">Architect</p>
+                            <div class="message">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </div>
+                        </div>
+
+                        <div class="btn"><button>Contact</button></div>
+                    </div>
+
+                    <!-- Person 4 -->
+                    <div class="card">
+                        <div class="cardImage">
+                            <img src="https://www.w3schools.com/w3images/team4.jpg" alt="John Doe">
+                        </div>
+
+                        <div class="info">
+                            <p class="name">Dan Star</p>
+                            <p class="work">Architect</p>
+                            <div class="message">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                            </div>
+                        </div>
+
+                        <div class="btn"><button>Contact</button></div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contact -->
         <section id="#contact">
+            <div class="contact">
+
+                <div class="text">
+                    <p>Contact</p>
+                    <hr>
+                    <p class="information">Lets get in touch and talk about your next project.</p>
+                </div>
+
+                <div class="form">
+                    <form>
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <input type="text" placeholder="Comment" required>
+                    </form>
+                    <div class="btn"><button>SEND MESSAGE</button></div>
+                </div>
+
+
+                <div class="wayPhoto">
+                    <img src="https://www.w3schools.com/w3images/map.jpg" alt="wayPhoto">
+                </div>
+            </div>
+
+            
 
         </section>
+
     </main>
-    
+
+    <footer>
+        <div class="footer"><span>Powered by <a href="#"> w3.css</a></span></div>
+    </footer>
 </body>
+
 </html>

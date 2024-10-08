@@ -1,0 +1,12 @@
+/* * {
+    margin: 0;
+    width: 0;
+    box-sizing: border-box;
+} */
+
+.col {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: chartreuse;
+}
