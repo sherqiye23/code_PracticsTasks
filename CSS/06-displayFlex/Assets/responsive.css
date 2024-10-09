@@ -1,0 +1,83 @@
+
+/* width 0 - 600px */
+@media (max-width: 600px)  {
+    
+    /* Header */
+    header {
+        .header {
+            .nav {
+                display: none;
+            }
+        } 
+    }
+
+    /* Main */
+    main {
+        /* Architects */
+        .architects {
+            width: 100%;
+
+            .none {
+                display: none;
+            }
+        }
+
+        /* projects */
+        .projects {
+
+            .houseImage-wrapper {
+                width: 100% !important;
+            }
+        }
+
+        /* About */
+        .about {
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+
+/* width 600px - 993px */
+@media (min-width: 601px) and (max-width: 993px) {
+
+    /* Header */
+    header {
+        .header {
+            .nav {
+                gap: 5px;
+            }
+        } 
+    }
+
+    /* Main */
+    main {
+        /* Architects */
+        .architects {
+            width: 100%;
+
+            /* Text logo */
+            .text-logo {
+                font-size: 40px;
+            }
+        }
+        
+        /* projects */
+        .projects {
+            .houseImage-wrapper {
+                width: 48% !important;
+            }
+        }
+
+        /* About tezden bax*/
+        .about {
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

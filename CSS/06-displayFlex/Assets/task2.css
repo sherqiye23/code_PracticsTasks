@@ -11,7 +11,7 @@ header {
         background-color: #fff;
         box-shadow: 5px 10px 20px rgb(190, 190, 190);
         border: 1px solid rgb(190, 190, 190);
-        padding: 10px 30px;
+        padding: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -49,8 +49,7 @@ main {
     /* Architects */
         .architects {
             margin: 0px auto;
-            width: 1400px;
-            height: 700px;
+            width: 95%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,6 +69,9 @@ main {
 
             /* Text logo */
             .text-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
                 position: absolute;
                 font-size: 50px;
                 color: #fff;
@@ -90,7 +92,7 @@ main {
         flex-direction: column;
         padding: 80px 0;
         gap: 20px;
-        width: 80%;
+        width: 90%;
         
         .text {
             display: flex;
@@ -119,8 +121,8 @@ main {
 
             .houseImage-wrapper {
                 position: relative;
-                width: 350px;
-                height: 183px;
+                /* width: 325px; */
+                width: 23%;
 
                 .houseImage {
                     width: 100%;
@@ -153,7 +155,7 @@ main {
         flex-direction: column;
         padding: 80px 0;
         gap: 20px;
-        width: 80%;
+        width: 90%;
         
         .text {
             display: flex;
@@ -181,9 +183,9 @@ main {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 10px;
 
             .card {
-                width: 350px;
 
                 .cardImage {
                     width: 100%;
@@ -206,17 +208,17 @@ main {
                     }
 
                     .name::selection, .message::selection {
-                        background-color: #4c4f70;
+                        background-color: #57647F;
                         color: #fff;
                     }
 
                     .work {
                         font-size: 18px;
-                        color: #afafaf;
+                        color: #9BA3B3;
                     }
 
                     .work::selection {
-                        background-color: #afafaf;
+                        background-color: #9BA3B3;
                         color: #fff;
                     }
 
@@ -226,7 +228,7 @@ main {
                 }
 
                 .btn {
-                    background-color: #ececec;
+                    background-color: #f1f1f1;
                     width: 100%;
                     padding: 10px;
 
@@ -235,8 +237,11 @@ main {
                         border: none;
                         width: 100%;
                         font-size: 18px;
-                    
                     }
+                }
+
+                .btn:hover {
+                    background-color: #cccccc;
                 }
             }
         }
@@ -248,9 +253,8 @@ main {
         justify-content: space-between;;
         margin: 0px auto;
         flex-direction: column;
-        padding-top: 80px;
         gap: 20px;
-        width: 80%;
+        width: 90%;
 
         .text {
             display: flex;
@@ -298,6 +302,11 @@ main {
                     border: none;
                     color: #fff;
                 }
+            }
+
+            button:hover {
+                background-color: #cccccc;
+                color: #000;
             }
         }
 
