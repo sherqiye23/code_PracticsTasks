@@ -1,0 +1,15 @@
+/* width 0 - 992px */
+@media (max-width: 992px)  {
+    /* Main */
+    .container {
+        flex-direction: column;
+    }
+
+    .post:nth-child(4) {
+        display: none !important;
+    }
+
+    hr:nth-child(3) {
+        display: none !important;
+    }
+}
