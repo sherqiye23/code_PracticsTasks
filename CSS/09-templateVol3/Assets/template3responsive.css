@@ -1,0 +1,147 @@
+/* phone */
+@media (max-width: 576px) {
+
+    .header, #classes, #contact, #options {
+        width: 85%;
+    }
+    
+    #classes .cards, #options .options-cards {
+        grid-template-columns: repeat(1, 9fr) !important;
+        
+    }
+
+    .header {
+        .navbar a {
+            display: none !important;
+        }
+        span {
+            display: flex !important;
+        }
+        span:hover {
+            color: #d33030;
+        }
+    }
+
+    #home .home {
+        width: 100%;
+    }
+
+    #classes {
+        justify-content: center;
+    
+        img {
+            height: 250px !important;
+        }
+    }
+    
+    #contact {
+        width: 100%;
+        .contact-box {
+            flex-direction: column;
+        }
+        .phone-email{
+            flex-direction: column;
+        }
+    }  
+}
+    
+/* mini tablet */
+@media (min-width: 576px) and (max-width: 768px){
+    
+    .header, #classes, #contact, #options {
+        width: 90%;
+    }
+    
+    #classes .cards, #options .options-cards {
+        grid-template-columns: repeat(1, 1fr) !important;
+        
+    }
+
+    .header {
+        .navbar a {
+            display: none !important;
+        }
+        span {
+            display: flex !important;
+        }
+        span:hover {
+            color: #d33030;
+        }
+    }
+
+    #home .home {
+        width: 90%;
+    }
+
+    #classes {
+        justify-content: center;
+    
+        img {
+            height: 450px !important;
+        }
+    }
+    
+    #contact {
+        width: 100%;
+        .contact-box {
+            flex-direction: column;
+        }
+        .phone-email{
+            flex-direction: column;
+        }
+    }  
+}
+    
+/* tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+    .header, #classes, #contact, #options {
+        width: 90%;
+    }
+
+    #classes .cards, #options .options-cards {
+        grid-template-columns: repeat(2, 5fr) !important;
+        
+    }
+
+    .header {
+        .navbar a {
+            display: none !important;
+        }
+        span {
+            display: flex !important;
+        }
+        span:hover {
+            color: #d33030;
+        }
+    }
+
+    #home .home {
+        width: 70%;
+    }
+
+    #classes {
+        justify-content: center;
+    }
+
+    #contact {
+        width: 100%;
+        .contact-box {
+            flex-direction: column;
+        }
+
+        .phone, .email {
+            width: 50%;
+        }
+    }
+    
+}
+    
+/* laptop */
+@media (min-width: 992px) and (max-width: 1200px){
+    .header, #classes, #contact, #options {
+        width: 90%;
+    }
+    #contact {
+        width: 100%;
+    }
+}
