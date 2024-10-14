@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sideHeader {
+    /* padding: 0 100px; */
+    background-color: rgba(126, 177, 160, 0.5);
+    height: 100%;
+    
+}
+
+
+.sideHeader > div{
+    width: 80%;
+    margin: 0 auto;
+    height: 50vh;
+
+    .text {
+        padding: 100px 200px;
+        color: rgba(0, 0, 0, 0.7);
+        h1 {
+            font-size: 100px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+    }
+}
+
+.karts {
+    padding: 20px 0;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.buttonss {
+    padding: 30px;
+    gap: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    padding: 30px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
