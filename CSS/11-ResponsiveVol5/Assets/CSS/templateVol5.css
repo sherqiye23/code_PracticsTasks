@@ -20,17 +20,21 @@ header {
 
             .logoName {
                 font-size: 25px;
-                font-weight: bold;
+                font-family: Quicksand-Bold;
             }
         }
 
         .list {
             a {
                 font-size: 18px;
-                margin-right: 5px;
+                margin-right: 10px;
                 text-decoration: none;
-                font-weight: 600;
+                font-family: Quicksand-SemiBold;
                 color: black;
+            }
+
+            a:hover {
+                color: #6a6a6a;
             }
         }
         
@@ -70,7 +74,12 @@ main {
                     font-size: 40px;
                 }
 
+                h5 {
+                    font-family: Quicksand-Bold;
+                }
+
                 span {
+                    font-family: Quicksand-Medium;
                     font-size: 80px;
                 }
 
@@ -99,7 +108,6 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /* width: 60%; */
             max-width: 1180px;
             margin: 0 auto;
             gap: 150px;
@@ -113,16 +121,24 @@ main {
                 }
 
                 .left-image {
+                    overflow: hidden;
                     width: 400px;
                     height: 400px;
                     img {
+                        transition: transform 1.5s ease;
+                        transform: translateX(-100%);
                         width: 100%;
                         height: 100%;
                     }
                 }
+
+                .left-image:hover img {
+                    transform: translateX(0%);
+                }
             }
 
             .studio-right {
+                font-family: Quicksand-Regular;
                 font-size: 20px;
 
                 a {
@@ -186,16 +202,24 @@ main {
                 }
 
                 .left-image {
+                    overflow: hidden;
                     width: 400px;
                     height: 400px;
                     img {
+                        transition: transform 1.5s ease;
+                        transform: translateX(100%);
                         width: 100%;
                         height: 100%;
                     }
                 }
+
+                .left-image:hover img {
+                    transform: translateX(0%);
+                }
             }
 
             .furniture-right {
+                font-family: Quicksand-Regular;
                 font-size: 20px;
 
                 a {
@@ -211,6 +235,8 @@ main {
         background-image: url("https://assets.nicepagecdn.com/11a8ddce/6182598/images/mid-century-modern-living-room-interior-design-with-monstera-tree.jpg");
         background-attachment: fixed;
         height: 400px;
+        background-position: 50% 50%;
+        background-size: cover;
     }
 
     /* FAQ */
@@ -244,6 +270,7 @@ main {
 
             .social-title {
                 font-size: 50px;
+                font-family: Quicksand-Bold;
             }
 
             .contact {
@@ -313,13 +340,27 @@ footer {
             max-width: 740px;
 
             .b-text {
+                font-family: Quicksand-Light;
                 font-size: 40px;
             }
 
             .b-name {
                 font-size: 20px;
-                font-weight: bold;
+                font-family: Quicksand-Bold;
             }
+
+            .b-img {
+                overflow: hidden;
+
+                img {
+                    transition: transform 1.5s ease;
+                    transform: translateY(110%);
+                }
+            }
+        }
+
+        .brown-container:hover img {
+            transform: translateY(0%);
         }
     }
 
