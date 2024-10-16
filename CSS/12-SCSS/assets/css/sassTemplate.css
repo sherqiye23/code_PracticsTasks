@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+}
+
+main #about .about, main #home .home, header .container {
+  margin: 0 auto;
+}
+
+header {
+  background-color: #222222;
+}
+header .container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header .container nav {
+  display: flex;
+  align-items: center;
+}
+header .container nav .services {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header .container nav .services ul {
+  background-color: #fff;
+  width: 160px;
+  padding: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+header .container nav .services ul li {
+  margin: 5px 0;
+}
+header .container nav .services ul li a {
+  color: #000;
+}
+header .container nav .services:hover ul {
+  display: flex;
+  flex-direction: column;
+}
+header .container nav .home {
+  color: #fff;
+  background-color: #080808;
+}
+header .container nav a {
+  padding: 18px 10px;
+  color: #9d9d9d;
+}
+header .container nav a:hover {
+  color: #fff;
+}
+header .container .search input[type=search] {
+  padding: 8px;
+  border-radius: 5px;
+}
+header .container .search button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: #000;
+}
+header .container .search button:hover {
+  opacity: 0.9;
+}
+
+main #home {
+  background-color: #9acd32;
+  padding: 50px 0;
+}
+main #home .home {
+  gap: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main #home .home h1 {
+  font-size: 70px;
+  color: #adff2f;
+}
+main #home .home p {
+  font-size: 23px;
+  color: #adff2f;
+}
+main #home .home button {
+  background-color: #337ab7;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #335c66;
+}
+main #about {
+  background-color: rgb(0, 61, 61);
+  padding: 50px 0;
+}
+main #about .about {
+  gap: 10px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main #about .about .about-title .bold {
+  font-size: 45px;
+  color: #000;
+}
+main #about .about .about-title .grey {
+  font-size: 30px;
+  color: #7f8081;
+}
+main #about .about .about-parag {
+  text-align: center;
+  color: #7f8081;
+}
+main #about .about .about-cards {
+  gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main #about .about .about-cards .about-card .about-image-wrapper .about-image {
+  width: 100%;
+  height: 100%;
+}
+main #about .about .about-cards .about-card .about-image-wrapper .about-image img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+main #about .about .about-cards .about-card .about-image-wrapper .about-info {
+  margin: 15px 0;
+  text-align: center;
+}
+main #about .about .about-cards .about-card .about-image-wrapper .about-info .info-title {
+  font-size: 30px;
+  color: #3a7cb7;
+}
+main #about .about .about-cards .about-card .about-image-wrapper .about-info .info-parag {
+  color: #7f8081;
+}/*# sourceMappingURL=sassTemplate.css.map */
