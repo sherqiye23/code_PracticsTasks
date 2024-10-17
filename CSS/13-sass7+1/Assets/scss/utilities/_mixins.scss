@@ -1,0 +1,35 @@
+@mixin flex($justify, $align, $direction:row, $gap:0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+// responsiveee
+@mixin responsive($breakpoints) {
+    @if $breakpoints == xsmall {
+        @media(max-width: 576px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == small {
+        @media (min-width: 576px) and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == medium {
+        @media (min-width: 768px) and (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == large {
+        @media (min-width: 992px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+}

@@ -1,0 +1,98 @@
+main {
+    #hero{
+        .bg-image {
+            background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/2625193/images/young-rural-travellers-picnic2.jpg");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+
+            .container {
+
+                .hero-card {
+                    padding: 30px;
+                    @include flex(space-between, start, column, 30px);
+                    width: 35%;
+                    background-color: #fff;
+
+                    &-title {
+                        font-size: 40px;
+                    }
+
+                    &-info {
+                        font-size: 20px;
+                    }
+
+                    &-link {
+                        font-size: 20px;
+
+                        a {
+                            color: #000;
+                            border-bottom: .5px solid #000;
+                            padding: 1px;
+
+                            &:hover {
+                                border-bottom-color: grey;
+                            }
+                        }
+                    }
+
+                    &-btn {
+                        color: #fff;
+                        background-color: $hero-button-color;
+                        padding: 15px 25px;
+                        border-radius: 30px;
+
+                        &:hover {
+                            background-color: $hero-button-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include responsive(xsmall) {
+            .container {
+                max-width: 330px !important;
+
+                .hero-card {
+                    width: 100% !important;
+
+                    &-title {
+                        font-size: 30px !important;
+                    }
+                }
+            }
+        }
+    
+        @include responsive(small) {
+            .container {
+                max-width: 550px !important;
+
+                .hero-card {
+                    width: 70% !important;
+                }
+            }
+        }
+    
+        @include responsive(medium) {
+            .container {
+                max-width: 700px !important;
+
+                .hero-card {
+                    width: 60% !important;
+                }
+            }
+        }
+    
+        @include responsive(large) {
+            .container {
+                max-width: 950px !important;
+
+                .hero-card {
+                    width: 40% !important;
+                }
+            }
+        }
+    }
+}

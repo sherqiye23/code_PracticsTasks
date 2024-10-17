@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  padding: 30px 0;
+}
+header .container .logo {
+  color: #bbbbbb;
+  font-size: 35px;
+}
+header .container .navbar nav a {
+  color: #000;
+  padding: 10px;
+}
+header .container .navbar nav a:hover {
+  background-color: #e7e7e7;
+}
+header .container .navbar .menu-logo {
+  display: none;
+  font-size: 35px;
+}
+@media (max-width: 576px) {
+  header .container {
+    max-width: 300px !important;
+  }
+  header .container nav {
+    display: none !important;
+  }
+  header .container .menu-logo {
+    display: flex !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header .container {
+    max-width: 550px !important;
+  }
+  header .container nav {
+    display: none !important;
+  }
+  header .container .menu-logo {
+    display: flex !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header .container {
+    max-width: 700px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .container {
+    max-width: 950px !important;
+  }
+}
+
+main #hero .bg-image {
+  background-image: url("https://assets.nicepagecdn.com/d2cc3eaa/2625193/images/young-rural-travellers-picnic2.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+main #hero .bg-image .container .hero-card {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  width: 35%;
+  background-color: #fff;
+}
+main #hero .bg-image .container .hero-card-title {
+  font-size: 40px;
+}
+main #hero .bg-image .container .hero-card-info {
+  font-size: 20px;
+}
+main #hero .bg-image .container .hero-card-link {
+  font-size: 20px;
+}
+main #hero .bg-image .container .hero-card-link a {
+  color: #000;
+  border-bottom: 0.5px solid #000;
+  padding: 1px;
+}
+main #hero .bg-image .container .hero-card-link a:hover {
+  border-bottom-color: grey;
+}
+main #hero .bg-image .container .hero-card-btn {
+  color: #fff;
+  background-color: #a79770;
+  padding: 15px 25px;
+  border-radius: 30px;
+}
+main #hero .bg-image .container .hero-card-btn:hover {
+  background-color: #9b8a60;
+}
+@media (max-width: 576px) {
+  main #hero .container {
+    max-width: 330px !important;
+  }
+  main #hero .container .hero-card {
+    width: 100% !important;
+  }
+  main #hero .container .hero-card-title {
+    font-size: 30px !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  main #hero .container {
+    max-width: 550px !important;
+  }
+  main #hero .container .hero-card {
+    width: 70% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main #hero .container {
+    max-width: 700px !important;
+  }
+  main #hero .container .hero-card {
+    width: 60% !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  main #hero .container {
+    max-width: 950px !important;
+  }
+  main #hero .container .hero-card {
+    width: 40% !important;
+  }
+}
+
+main #getaway {
+  padding: 50px 0;
+}
+main #getaway .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+main #getaway .container .getaway-title {
+  font-size: 60px;
+  font-weight: bold;
+}
+main #getaway .container .getaway-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+main #getaway .container .getaway-cards .getaway-card {
+  width: 100%;
+}
+main #getaway .container .getaway-cards .getaway-card-wrapper {
+  position: relative;
+  width: 100%;
+}
+main #getaway .container .getaway-cards .getaway-card-image {
+  width: 100%;
+}
+main #getaway .container .getaway-cards .getaway-card-image img {
+  filter: brightness(0.7);
+  width: 100%;
+}
+main #getaway .container .getaway-cards .getaway-card-info {
+  border-top: 3px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 15px;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  padding-top: 30px;
+  right: 30px;
+}
+main #getaway .container .getaway-cards .getaway-card-info-title {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 23px;
+}
+main #getaway .container .getaway-cards .getaway-card-info-parag {
+  font-size: 20px;
+}
+main #getaway .container .getaway-link {
+  font-weight: 600;
+  font-style: italic;
+}
+main #getaway .container .getaway-link a {
+  color: #000;
+  border-bottom: 0.5px solid #000;
+  padding: 1px;
+}
+main #getaway .container .getaway-link a:hover {
+  border-bottom-color: grey;
+}
+@media (max-width: 576px) {
+  main #getaway .container {
+    max-width: 330px !important;
+  }
+  main #getaway .container .getaway-title {
+    font-size: 35px;
+    white-space: nowrap;
+  }
+  main #getaway .container .getaway-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  main #getaway .container {
+    max-width: 550px !important;
+  }
+  main #getaway .container .getaway-title {
+    font-size: 45px;
+  }
+  main #getaway .container .getaway-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main #getaway .container {
+    max-width: 700px !important;
+  }
+  main #getaway .container .getaway-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  main #getaway .container {
+    max-width: 950px !important;
+  }
+}
+
+main #season {
+  background-color: #000;
+  padding: 50px 0;
+}/*# sourceMappingURL=style.css.map */
