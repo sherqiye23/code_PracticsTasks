@@ -1,0 +1,66 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    .container {
+
+        nav {
+            a {
+                font-weight: 500;
+                transition: color .8s ease;
+                margin-right: 20px;
+                font-size: 20px;
+                color: #fff;
+
+                &:hover {
+                    color: $header-hover-color;
+                }
+            }
+        }
+
+        .menu-logo {
+            color: #fff;
+            display: none;
+            font-size: 35px;
+        }
+    }
+
+    @include responsive(xsmall) {
+        .container {
+            max-width: $xsmall-maxwidth;
+
+            nav {
+                display: none !important;
+            }
+            .menu-logo {
+                display: flex !important;
+            }
+        }
+    }
+
+    @include responsive(small) {
+        .container {
+            max-width: $small-maxwidth;
+
+            nav {
+                display: none !important;
+            }
+            .menu-logo {
+                display: flex !important;
+            }
+        }
+    }
+
+    @include responsive(medium) {
+        .container {
+            max-width: $medium-maxwidth;
+        }
+    }
+
+    @include responsive(large) {
+        .container {
+            max-width: $large-maxwidth;
+        }
+    }
+}

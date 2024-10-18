@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+}
+header .container nav a {
+  font-weight: 500;
+  transition: color 0.8s ease;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+header .container nav a:hover {
+  color: #d73e4d;
+}
+header .container .menu-logo {
+  color: #fff;
+  display: none;
+  font-size: 35px;
+}
+@media (max-width: 576px) {
+  header .container {
+    max-width: 95%;
+  }
+  header .container nav {
+    display: none !important;
+  }
+  header .container .menu-logo {
+    display: flex !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header .container {
+    max-width: 540px;
+  }
+  header .container nav {
+    display: none !important;
+  }
+  header .container .menu-logo {
+    display: flex !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .container {
+    max-width: 960px;
+  }
+}
+
+main #home .home {
+  padding: 330px;
+  background-image: url("https://preview.colorlib.com/theme/bizpro/images/home/slide-1.jpg.webp");
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+}
+main #home .home-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+main #home .home-info {
+  font-size: 20px;
+}
+main #home .home-button {
+  padding: 15px;
+  border: 1px solid #d73e4d;
+}
+main #home .home-button:hover {
+  background-color: #d73e4d;
+}
+main #home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  main #home .container {
+    max-width: 95%;
+  }
+  main #home .home {
+    padding: 200px;
+  }
+  main #home .home-title {
+    white-space: nowrap;
+    font-size: 25px !important;
+  }
+  main #home .home-info {
+    white-space: nowrap;
+    font-size: 18px !important;
+  }
+  main #home .home-button {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  main #home .container {
+    max-width: 540px;
+  }
+  main #home .home {
+    padding: 200px;
+  }
+  main #home .home-title {
+    white-space: nowrap;
+    font-size: 30px !important;
+  }
+  main #home .home-info {
+    white-space: nowrap;
+    font-size: 18px !important;
+  }
+  main #home .home-button {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main #home .container {
+    max-width: 720px;
+  }
+  main #home .home {
+    padding: 250px;
+  }
+  main #home .home-title {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  main #home .container {
+    max-width: 960px;
+  }
+  main #home .home {
+    padding: 300px;
+  }
+  main #home .home-title {
+    font-size: 45px !important;
+  }
+}
+
+main #about {
+  padding: 80px 0;
+}
+main #about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+main #about .container .about-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+}
+main #about .container .about-title::after {
+  content: "";
+  width: 25px;
+  border: 2px solid #d73e4d;
+  position: absolute;
+  bottom: -25px;
+}
+main #about .container .about-info {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
+main #about .container .about-cards {
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+main #about .container .about-cards .about-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+main #about .container .about-cards .about-card-icon {
+  transition: all 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0px;
+  padding: 50px;
+  border: 2px solid #d73e4d;
+  border-radius: 50%;
+  font-size: 40px;
+}
+main #about .container .about-cards .about-card-title {
+  transition: all 0.8s ease;
+  font-weight: bold;
+  font-size: 22px;
+}
+main #about .container .about-cards .about-card-info {
+  text-align: center;
+  color: gray;
+}
+main #about .container .about-cards .about-card-button {
+  padding: 10px 20px;
+  border: 1px solid #d73e4d;
+  color: gray;
+}
+main #about .container .about-cards .about-card-button:hover {
+  background-color: #d73e4d;
+  color: #fff;
+}
+main #about .container .about-cards .about-card:hover .about-card-icon {
+  color: #fff;
+  background-color: #d73e4d;
+}
+main #about .container .about-cards .about-card:hover .about-card-title {
+  color: #d73e4d;
+}
+@media (max-width: 576px) {
+  main .container {
+    max-width: 95%;
+  }
+  main .about-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  main .container {
+    max-width: 540px;
+  }
+  main .about-cards {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  main .container {
+    max-width: 720px;
+  }
+  main .about-cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  main .container {
+    max-width: 960px;
+  }
+  main .about-cards {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}/*# sourceMappingURL=style.css.map */

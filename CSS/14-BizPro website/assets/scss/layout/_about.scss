@@ -1,0 +1,120 @@
+main {
+    #about {
+        padding: 80px 0;
+        .container {
+            @include flex(center, center, column, 50px);
+
+            .about-title {
+                @include flex(center,center,column);
+                position: relative;
+                font-size: 40px;
+                font-weight: bold;
+
+                &::after {
+                    content: "";
+                    width: 25px;
+                    border: 2px solid $header-hover-color;
+                    position: absolute;
+                    bottom: -25px;
+                }
+            }
+
+            .about-info {
+                text-align: center;
+                font-size: 18px;
+                color: gray;
+            }
+
+            .about-cards {
+                gap: 30px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+
+                .about-card {
+                    @include flex(center, center, column, 20px);
+
+                    &-icon {
+                        transition: all .8s ease;
+                        @include flex(center, center);
+                        padding: 50px;
+                        border: 2px solid $header-hover-color;
+                        border-radius: 50%;
+                        font-size: 40px;
+                    }
+
+                    &-title {
+                        transition: all .8s ease;
+                        font-weight: bold;
+                        font-size: 22px;
+                    }
+
+                    &-info {
+                        text-align: center;
+                        color: gray;
+                    }
+
+                    &-button {
+                        padding: 10px 20px;
+                        border: 1px solid $header-hover-color;
+                        color: gray;
+
+                        &:hover {
+                            background-color: $header-hover-color;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .about-card:hover {
+                    .about-card-icon {
+                        color: #fff;
+                        background-color: $header-hover-color;
+                    }
+
+                    .about-card-title {
+                        color: $header-hover-color;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive(xsmall) {
+        .container {
+            max-width: $xsmall-maxwidth;
+        }
+
+        .about-cards {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+
+    @include responsive(small) {
+        .container {
+            max-width: $small-maxwidth;
+        }
+
+        .about-cards {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+
+    @include responsive(medium) {
+        .container {
+            max-width: $medium-maxwidth;
+        }
+
+        .about-cards {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    @include responsive(large) {
+        .container {
+            max-width: $large-maxwidth;
+        }
+        .about-cards {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+}

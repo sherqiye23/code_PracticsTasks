@@ -1,0 +1,5 @@
+.container {
+    margin: 0 auto;
+    max-width: $xlarge-maxwidth;
+    @include flex(space-between, center);
+}
