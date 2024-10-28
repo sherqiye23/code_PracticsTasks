@@ -76,16 +76,16 @@
 
 // 19. Arraydəki ədədlərin ədədi ortasını tapmaq.
 
-let array = [1, 2, 3, 4, 5, 6];
-let cem = 0;
-let edediOrta;
+// let array = [1, 2, 3, 4, 5, 6];
+// let cem = 0;
+// let edediOrta;
 
-for (let i = 0; i < array.length; i ++) {
-    cem += Number(array[i]);
-}
+// for (let i = 0; i < array.length; i ++) {
+//     cem += Number(array[i]);
+// }
 
-edediOrta = cem / array.length
-console.log(edediOrta);
+// edediOrta = cem / array.length
+// console.log(edediOrta);
 
 
 
@@ -104,5 +104,23 @@ console.log(edediOrta);
 //     }
 // }
 // console.log(count)
+
+
+
+
+
+// let i = 6;
+
+// do {
+//     console.log(i);
+//     i+=1
+// } while (i<5)
+
+// let i = 6;
+
+// while (i<5) {
+//     console.log(i);
+//     i+=1
+// }
 
 
