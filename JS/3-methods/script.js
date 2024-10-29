@@ -109,24 +109,24 @@ Expected Output:
 "A Short Sentence" */
 
 
-function sentenceCapitalization(string) {
-    let result = string;
-    let x = string.toUpperCase(string[0]);
-    console.log(x);
-    console.log(result);
-    console.log(string.slice(1));
-    let arr = string.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-        let word = arr[i][0].toUpperCase();
-        console.log(arr[i][0].toUpperCase())
-        console.log(arr);
-    }
+// function sentenceCapitalization(string) {
+//     let result = string;
+//     let x = string.toUpperCase(string[0]);
+//     console.log(x);
+//     console.log(result);
+//     console.log(string.slice(1));
+//     let arr = string.split(" ");
+//     for (let i = 0; i < arr.length; i++) {
+//         let word = arr[i][0].toUpperCase();
+//         console.log(arr[i][0].toUpperCase())
+//         console.log(arr);
+//     }
     
     
-    return string.at(0).toUpperCase() + string.slice(1);
-}
-let string= "a short sentence";
-console.log(sentenceCapitalization(string));
+//     return string.at(0).toUpperCase() + string.slice(1);
+// }
+// let string= "a short sentence";
+// console.log(sentenceCapitalization(string));
 
 
 
@@ -139,9 +139,48 @@ Expected Output:
 5[.]5[.]5[.]5[.]5 */
 
 
-function Replace(element) {
-    element.replace(".", 1)
-    console.log(element)
-}
+// function Replace(element) {
+//     element.replace(".", 1)
+//     console.log(element)
+// }
 
-Replace("5.5.5.5.5")
+// Replace("5.5.5.5.5")
+
+
+
+
+
+//21
+// function indexOf(cumle, soz) {
+//     let index = cumle.indexOf(soz);
+//     return index;
+// }
+
+// let cumle = "eger butun beseriyyet eduvvi canim ola"
+// let soz = "canim"
+// console.log(indexOf(cumle,soz));
+
+
+// 22
+// function upperCase(string) {
+//     let upperString = string.toUpperCase();
+//     return upperString;
+// }
+// console.log(upperCase("salam"));
+
+// 18
+// function medianFind(array) {
+//     if (array.length % 2 == 1) {
+//         // tek
+//         let median = array[(array.length - 1)/2];
+//         return median;
+//     } else {
+//         let index1 = array.length/2;
+//         let index2 = (array.length/2)-1;
+//         let median = (array[index1]+array[index2])/2;
+//         return median;
+//     }
+// }
+
+// console.log(medianFind([1,2,3,4,5,6]));
+
