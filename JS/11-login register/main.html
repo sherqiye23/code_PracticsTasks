@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px;
+        p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #signIn {
+            border: none;
+            border-radius: 5px;
+            background-color: darkred;
+            padding: 7px;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="navbar" >
+        <p>You are not logged in!</p>
+        <button id="signIn">Sign in!</button>
+    </div>
+   
+
+
+    <script>
+        let signIn = document.querySelector("#signIn");
+        signIn.addEventListener("click", () => {
+            window.location = "./login.html"
+        })
+    </script>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
