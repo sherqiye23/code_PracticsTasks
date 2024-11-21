@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        body {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .detailsContainer {
+            width: 70%;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            .detailsCategory {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DETAILS</h1>
+    <div class="detailsContainer"></div>
+
+    <script src="./API/detailspage.js" type="module"></script>
+</body>
+</html>
