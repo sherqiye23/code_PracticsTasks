@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <style>
     .register-container {
@@ -32,7 +33,8 @@
             }
 
             #register-username,
-            #register-password {
+            #register-password,
+            #register-email {
                 margin-bottom: 15px;
                 padding: 5px;
                 outline: none;
@@ -78,6 +80,8 @@
         <form id="registerForm">
             <label for="register-username">Username</label>
             <input type="text" id="register-username">
+            <label for="register-mail">E-mail</label>
+            <input type="email" id="register-email">
             <label for="register-password">Password</label>
             <input type="password" id="register-password">
             <button type="submit" id="register-enter">ENTER</button>
@@ -88,24 +92,7 @@
         </div>
     </div>
 
-    
-    <script>
-        registerForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            let user = {
-                name: registerUsername.value,
-                password: registerPassword.value
-            };
-            usersInfo.push(user);
-            console.log(usersInfo)
-            localStorage.setItem("userInfo", JSON.stringify(usersInfo));
-            // localStorage.clear()
-            console.log(localStorage)
-            alert("Successfully registered!");
-            window.location = "./login.html"
-        });
-    </script>
-    <script src="./script.js"></script>
+    <script src="./API/register.js" type="module"></script>
 </body>
 
 </html>

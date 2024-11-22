@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <style>
     * {
@@ -17,12 +18,17 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px 50px;
+        .username {
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
         p {
             font-weight: bold;
             font-size: 30px;
         }
 
-        #signIn {
+        #signIn, #logout {
             border: none;
             border-radius: 5px;
             background-color: darkred;
@@ -37,19 +43,11 @@
 
     <div class="navbar" >
         <p>You are not logged in!</p>
-        <button id="signIn">Sign in!</button>
+        <div class="logout-signin">
+        </div>
     </div>
-   
 
-
-    <script>
-        let signIn = document.querySelector("#signIn");
-        signIn.addEventListener("click", () => {
-            window.location = "./login.html"
-        })
-    </script>
-
-    <script src="./script.js"></script>
+    <script src="./script.js" type="module"></script>
 
 </body>
 </html>

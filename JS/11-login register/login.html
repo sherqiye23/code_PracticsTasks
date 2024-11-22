@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <style>
     * {
@@ -32,7 +33,7 @@
             label {
                 font-weight: bold;
             }
-            #login-username, #login-password {
+            #login-email, #login-password {
                 margin-bottom: 15px;
                 padding: 5px;
                 outline: none;
@@ -68,8 +69,8 @@
     <div class="login-container">
         <h1>LOGIN</h1>
         <form id="loginForm">
-            <label for="login-username">Username</label>
-            <input type="text" id="login-username">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email">
             <label for="login-password">Password</label>
             <input type="password" id="login-password">
             <button type="submit" id="login-enter">ENTER</button>
@@ -81,6 +82,6 @@
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./API/login.js" type="module"></script>
 </body>
 </html>

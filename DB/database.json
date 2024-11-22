@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "be1e",
+      "username": "qafasoz",
+      "email": "faxi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "ba1f",
+      "username": "kafamicyt",
+      "email": "cutebevuwu@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "acfb",
+      "username": "tomobenu",
+      "email": "telozak@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "68b6",
+      "username": "dudybice",
+      "email": "zyvitaci@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "isAdmin": false,
+      "favorites": []
+    },
+    {
+      "id": "0e1f",
+      "username": "serqiye",
+      "email": "serqi@gmail.com",
+      "password": "serqi",
+      "isAdmin": false,
+      "favorites": []
+    }
+  ]
+}
