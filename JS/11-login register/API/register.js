@@ -13,7 +13,7 @@ registerForm.addEventListener("submit", (e)=> {
     if (registerUsername.value != "" && registerPassword.value != "") {
         GetUsers(url).then(res => {
             const data = res.data;
-            let findedUser = data.find(user => user.email == registerEmail.value)
+            let findedUser = data.find(user => user.email == registerEmail.value);
             if (findedUser) {
                 alert("Bu email artıq qeydiyyatdan keçib");
             } else {
@@ -24,6 +24,8 @@ registerForm.addEventListener("submit", (e)=> {
                     isAdmin: false,
                     favorites: []
                 }
+                console.log(newUser);
+                
                 PostUser(url, newUser).then(()=>{
                     window.location.href = "./login.html"
                 })
