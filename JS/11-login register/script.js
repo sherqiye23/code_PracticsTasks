@@ -7,7 +7,6 @@ function GetLocalId() {
     if (userId) {
         GetUserById(url, userId).then(res => {
             const data = res.data;
-            console.log(data);
             logoutSignin.innerHTML = `
             <div class="logout">
                 <span class="username">${data.username}</span>

@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "username": "dcsfa",
+      "email": "fafsaf@gmail.com",
+      "password": "1234",
+      "isAdmin": false,
+      "favorites": [],
+      "baskets": [],
+      "id": 1
+    },
+    {
+      "username": "dcsfa1",
+      "email": "fafsaf@gmail.com",
+      "password": "12341",
+      "isAdmin": false,
+      "favorites": [],
+      "baskets": [],
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "image": "https://au.ooni.com/cdn/shop/articles/20220211142645-margherita-9920.jpg?crop=center&height=800&v=1662539926&width=800",
+      "name": "Margherita",
+      "price": 10,
+      "description": "Tomato sauce, fresh mozzarella cheese, fresh basil leaves, olive oil."
+    },
+    {
+      "id": "2",
+      "image": "https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8YUdObEwyaG1aQzh4TlRrMk9EWXlOVGM0TmpreE1DNXFjR2N8MmYwYzQ4YTg0MTgzNmVjYTZkMWZkZWZmMDdlMWFlMjRhOGIxMTQ2MTZkNDk4ZDU3ZjlkNDk2MzMzNDA5OWY3OA",
+      "name": "Pepperoni",
+      "price": 8,
+      "description": "Tomato sauce, mozzarella cheese, pepperoni slices."
+    },
+    {
+      "id": "3",
+      "image": "https://www.thursdaynightpizza.com/wp-content/uploads/2022/06/veggie-pizza-side-view-out-of-oven-720x480.png",
+      "name": "Veggie Pizza",
+      "price": 13,
+      "description": "Tomato sauce, mozzarella cheese, bell peppers, mushrooms, olives, tomatoes, red onions."
+    },
+    {
+      "id": "4",
+      "image": "https://www.thecandidcooks.com/wp-content/uploads/2023/04/bbq-chicken-pizza-feature.jpg",
+      "name": "BBQ Chicken Pizza",
+      "price": 11,
+      "description": "Barbecue sauce, chicken, mozzarella cheese, red onions, cilantro (optional)."
+    },
+    {
+      "id": "5",
+      "image": "https://arteflame.com/cdn/shop/articles/Quattro_Formaggi_pizza_freshly_baked_and_ready_to_enjoy.webp?v=1715287482&width=1600",
+      "name": "Quattro Formaggi",
+      "price": 9,
+      "description": "Mozzarella, parmesan, gorgonzola, and ricotta cheeses."
+    }
+  ]
+}
