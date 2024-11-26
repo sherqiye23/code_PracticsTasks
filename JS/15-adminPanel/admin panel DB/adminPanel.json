@@ -5,8 +5,16 @@
       "email": "serqi@gmail.com",
       "password": "1234",
       "isAdmin": false,
-      "favorites": [],
-      "baskets": [],
+      "favorites": [
+        "3",
+        "2",
+        "4"
+      ],
+      "baskets": [
+        "2",
+        "3",
+        "4"
+      ],
       "id": 1
     }
   ],
