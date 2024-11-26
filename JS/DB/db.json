@@ -1,11 +1,14 @@
 {
   "users": [
     {
-      "username": "dcsfa",
+      "username": "Wergie",
       "email": "fafsaf@gmail.com",
       "password": "1234",
       "isAdmin": false,
-      "favorites": [],
+      "favorites": [
+        "3",
+        "2"
+      ],
       "baskets": [],
       "id": 1
     },

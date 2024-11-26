@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            outline: none
+        }
+        body {
+            background-color: rgb(240, 255, 249);
+            height: 100vh;
+        }
+        .regContainer {
+            border-radius: 10px;
+            background-color: rgb(216, 240, 191);
+            width: 30%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            #regForm {
+                padding: 30px 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                h1 {
+                    font-size: 40px;
+                    color: rgb(35, 56, 35);
+                }
+                input {
+                    font-size: 17px;
+                    padding: 5px;
+                    width: 100%;
+                    border-bottom: 1px solid rgb(35, 56, 35);
+                }
+                button {
+                    font-size: 17px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    background-color: rgb(35, 56, 35);
+                    color: #fff;
+                    width: 100%;
+                }
+                p {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    color: rgb(35, 56, 35);
+                    font-weight: bold;
+                    font-size: 17px;
+                    a {
+                        color: rgb(61, 143, 61);
+                    }
+                }
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="regContainer">
+        <form id="regForm">
+            <h1>REGISTER</h1>
+            <input type="text" id="regName" placeholder="Username" required>
+            <input type="email" id="regEmail" placeholder="E-Mail" required>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <button type="submit">Enter</button>
+            <p><span>Do you have account?</span><a href="./login.html">Log in</a></p>
+        </form>
+    </div>
+    
+
+
+    <script type="module" src="./JS/register.js"></script>
+</body>
+</html>
