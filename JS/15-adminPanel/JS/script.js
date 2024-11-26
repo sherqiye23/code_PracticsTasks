@@ -11,7 +11,12 @@ let userId = JSON.parse(localStorage.getItem("userInfo"));
 let navbar = document.querySelector(".navbar")
 let navHeart = document.querySelector(".heart")
 // ureye klik edende userId olub olmadigini yoxlamalidir
-
+navHeart.addEventListener("click", () => {
+    if (!userId) {
+        alert("siz qeydiyyatdan kecmemisiz deye gonderrem login sehifesine");
+        window.location.href = "./login.html"
+    }
+})
 function GetLocalId() {
     
 
