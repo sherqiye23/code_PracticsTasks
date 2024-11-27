@@ -23,7 +23,7 @@ function ShowDetail(phone) {
                     <h3>Buraxılış ili : ${phone.year}</h3>
                 </div>
                 <div class="price">
-                    <h1>${phone.price}$</h1>
+                    <h1>Qiymət: ${phone.price}$</h1>
                     <div class="icons">
                         <span class="addFavs" data-id="${phone.id}">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"

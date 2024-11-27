@@ -11,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         * {
+            box-sizing: border-box;
             user-select: none;
             padding: 0;
             margin: 0;
@@ -82,7 +83,6 @@
             align-items: center;
 
             .cards {
-                width: 80%;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 30px;
@@ -100,7 +100,7 @@
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-
+                    background-color: #fff;
                     
                     .image {
                         padding-top: 5px;
@@ -120,7 +120,7 @@
                     }
 
                     .text {
-                        margin-bottom: 50px;
+                        margin-bottom: 65px;
                         padding: 10px;
 
                         h4 {
@@ -154,7 +154,6 @@
                             align-items: center;
 
                             .removeText {
-                                white-space: nowrap;
                                 transform: translateX(-150%);
                                 transition: all .5s ease;
                                 border: 1px solid #ff7777;
@@ -172,7 +171,6 @@
                             align-items: center;
 
                             .addText {
-                                white-space: nowrap;
                                 transform: translateX(160%);
                                 transition: all .5s ease;
                                 border: 1px solid #000;
@@ -189,6 +187,39 @@
             }
 
         }
+
+        @media (max-width: 576px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+                h1 {
+                    font-size: 25px;
+                }
+            }
+            .cards {
+                width: 95%;
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .cards {
+                width: 99%;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+            .cards {
+                width: 85%;
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
     </style>
 </head>
 
@@ -197,8 +228,6 @@
     <header>
         <div class="nav">
             <div class="navbar">
-                <!-- <h1>You are not logged in!</h1>
-                <button><a href="./login.html">Sign in!</a></button> -->
             </div>
             <div class="icons">
                 <a href="./main.html" class="homeLink">

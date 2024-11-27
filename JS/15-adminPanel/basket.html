@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
+    <title>Basket</title>
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
         integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         * {
+            box-sizing: border-box;
             user-select: none;
             padding: 0;
             margin: 0;
@@ -69,6 +70,7 @@
                 }
             }
         }
+
         main {
             user-select: none;
             margin: 0 auto;
@@ -82,7 +84,6 @@
             align-items: center;
 
             .cards {
-                width: 80%;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 30px;
@@ -91,6 +92,7 @@
                     &:hover {
                         transform: translateY(-2%);
                     }
+
                     user-select: none;
                     transition: transform .3s ease;
                     overflow: hidden;
@@ -100,8 +102,8 @@
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+                    background-color: #fff;
 
-                    
                     .image {
                         padding-top: 5px;
                         margin: 0 auto;
@@ -166,9 +168,71 @@
                         }
                     }
 
+                    .countChange {
+                        align-items: center;
+                        display: flex;
+                        gap: 10px;
+
+                        span {
+                            font-size: 25px;
+                        }
+
+                        .minus,
+                        .plus {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            width: 30px;
+                            height: 30px;
+                            background-color: darkslategrey;
+                            color: #fff;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+
                 }
             }
 
+        }
+
+        footer {
+            width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        @media (max-width: 576px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+                h1 {
+                    font-size: 25px;
+                }
+            }
+            .cards {
+                width: 95%;
+                grid-template-columns: repeat(1, 1fr) !important;
+            }
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .cards {
+                width: 99%;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+            .cards {
+                width: 85%;
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
         }
     </style>
 </head>
@@ -189,12 +253,12 @@
                     </svg>
                 </a>
                 <!-- heart icon -->
-                    <svg class="heart" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                        height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
-                        </path>
-                    </svg>
+                <svg class="heart" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                    height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                    </path>
+                </svg>
                 <!-- basket icon -->
                 <svg class="basket" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
                     height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
@@ -209,29 +273,12 @@
     <main>
         <h1>Phones in my Basket</h1>
         <div class="cards">
-            <div class="card">
-                <div class="image">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1169/1169615.png" alt="phone icon">
-                </div>
-                <div class="text">
-                    <h4>${brand}</h4>
-                    <h3>${model}, ${year}</h3>
-                    <p>${operatingSystem}</p>
-                    <h3>${price}$</h3>
-                </div>
-                <div class="icons">
-                    <span class="removeBasket" data-id="${id}">
-                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="2.5em" width="2.5em" xmlns="http://www.w3.org/2000/svg"><path d="M17 10l-2 -6"></path><path d="M7 10l2 -6"></path><path d="M12 20h-4.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304l-.833 4.75"></path><path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M16 19h6"></path></svg>
-                        <span class="removeText">Remove from Basket</span>
-                    </span>
-                </div>
-                <div class="count">
-                    <span>+</span>
-                </div>
-            </div>
+
         </div>
     </main>
-    
+
+    <footer>
+    </footer>
 
     <script type="module" src="./JS/basket.js"></script>
 </body>
