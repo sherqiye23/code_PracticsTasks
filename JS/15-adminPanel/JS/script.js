@@ -1,13 +1,48 @@
 import { localHostUrl } from "./baseurl.js";
-import {  GetElementById, GetElements, UpdateElement } from "./Requests/requests.js";
+import { GetElementById, GetElements, UpdateElement } from "./Requests/requests.js";
 import { HeaderFunction, GetLocalId } from "./header.js";
 
 let userId = JSON.parse(localStorage.getItem("userInfo"));
 
 let cards = document.querySelector(".cards");
+let data = [];
 GetElements(localHostUrl + "phones").then(res => {
-    const data = res.data;
+    data = res.data;
     ShowProducts(data);
+    // SEARCH
+    let searchInp = document.querySelector(".searchInp");
+    searchInp.addEventListener("input", () => {
+        console.log(searchInp.value);
+        // console.log(data);
+        let findSearch = data.filter(phone => (phone.model.toLowerCase()).startsWith(searchInp.value.trim().toLowerCase()))
+        console.log(findSearch);
+        ShowProducts(findSearch);
+    })
+
+    // SORT
+    let sortSelect = document.querySelector(".sort");
+    sortSelect.addEventListener("change", (e) => {
+        console.log(e.target.value);
+    
+        let sortedData;
+        switch (e.target.value) {
+            case "3":
+                sortedData = data.toSorted((a, b) => a.model.localeCompare(b.model))
+                break;
+            case "4":
+                sortedData = data.toSorted((a, b) => b.model.localeCompare(a.model))
+                break;
+            case "1":
+                sortedData = data.toSorted((a, b) => a.price - b.price)
+                break;
+            case "2":
+                sortedData = data.toSorted((a, b) => b.price - a.price)
+                break;
+            default :
+                sortedData = [...data];
+        }
+        ShowProducts(sortedData);
+    })
 })
 
 GetLocalId()
@@ -15,9 +50,9 @@ HeaderFunction()
 
 function ShowProducts(array) {
     cards.innerHTML = "";
-    array.forEach(({id, brand, model, year, operatingSystem, price}) => {
+    array.forEach(({ id, brand, model, year, operatingSystem, price }) => {
         cards.innerHTML += `
-            <div class="card">
+            <div class="card" data-id="${id}">
                 <div class="image">
                     <img src="https://cdn-icons-png.flaticon.com/512/1169/1169615.png" alt="phone icon">
                 </div>
@@ -25,7 +60,7 @@ function ShowProducts(array) {
                     <h4>${brand}</h4>
                     <h3>${model}, ${year}</h3>
                     <p>${operatingSystem}</p>
-                    <h3>${price}</h3>
+                    <h3>${price}$</h3>
                 </div>
                 <div class="icons">
                     <span class="addFavs" data-id="${id}">
@@ -47,15 +82,16 @@ function ShowProducts(array) {
 
         let addFavs = document.querySelectorAll(".addFavs");
         addFavs.forEach(addFav => {
-            addFav.addEventListener("click", () => {
+            addFav.addEventListener("click", (e) => {
+                e.stopPropagation()
                 let favId = addFav.getAttribute("data-id");
-                GetElementById(localHostUrl+"users", userId).then(res => {
+                GetElementById(localHostUrl + "users", userId).then(res => {
                     const data = res.data;
                     if (data.favorites.includes(favId)) {
                         alert("siz bu mehsulu fav liste elave elemisiz");
                     } else {
                         data.favorites.push(favId);
-                        UpdateElement(localHostUrl+"users", userId, data).then(() => {})
+                        UpdateElement(localHostUrl + "users", userId, data).then(() => { })
                     }
                 })
             })
@@ -63,19 +99,32 @@ function ShowProducts(array) {
 
         let addBasket = document.querySelectorAll(".addBasket");
         addBasket.forEach(basket => {
-            basket.addEventListener("click", () => {
+            basket.addEventListener("click", (e) => {
+                e.stopPropagation()
                 let basketId = basket.getAttribute("data-id");
-                GetElementById(localHostUrl+"users", userId).then(res => {
+                GetElementById(localHostUrl + "users", userId).then(res => {
                     const data = res.data;
-                    if (data.baskets.includes(basketId)) {
+                    console.log(basketId);
+                    let x = data.baskets.find(phone => phone.id == basketId)
+                    if (x) {
                         alert("siz bu mehsulu sebete elave elemisiz");
-                    } else {
-                        data.baskets.push(basketId);
-                        UpdateElement(localHostUrl+"users", userId, data).then(() => {})
+                    } 
+                    else {
+                        data.baskets.push({ id: basketId, count: 1 });
+                        UpdateElement(localHostUrl + "users", userId, data).then(() => { })
                     }
                 })
             })
         })
+
+        let card = document.querySelectorAll(".card");
+        card.forEach(cardElement => {
+            cardElement.addEventListener('click', (e) => {
+                window.location = "./details.html?id=" + cardElement.dataset.id;
+            })
+        })
+
+
     });
 }
 

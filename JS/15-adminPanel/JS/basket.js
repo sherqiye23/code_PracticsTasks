@@ -11,10 +11,19 @@ let userId = JSON.parse(localStorage.getItem("userInfo"));
 function GetBasket() {
     GetElementById(localHostUrl + "users", userId).then(res => {
         const userData = res.data;
+        console.log(userData.baskets);
+        let basketsId = []
+        userData.baskets.forEach(value => basketsId.push(value.id))
+        console.log(basketsId);
+        
+        
         GetElements(localHostUrl + "phones").then(res => {
-            const productData = res.data;         
-            let basketProducts = productData.filter(product => userData.baskets.includes(String(product.id)));
-            ShowFavs(basketProducts)
+            const productData = res.data;  
+            console.log(productData);
+            let basketProducts = productData.filter(product => basketsId.includes(String(product.id)));
+            console.log(basketProducts);
+
+            // ShowFavs(basketProducts)
         })
     })
 }

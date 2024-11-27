@@ -12,7 +12,7 @@ function GetFavorites() {
     GetElementById(localHostUrl + "users", userId).then(res => {
         const userData = res.data;
         GetElements(localHostUrl + "phones").then(res => {
-            const productData = res.data; 
+            const productData = res.data;
             let favProducts = productData.filter(product => userData.favorites.includes(String(product.id)));
             ShowFavs(favProducts)
         })
@@ -29,7 +29,7 @@ function ShowFavs(array) {
             </h2>
         `
     } else {
-        array.forEach(({id, brand, model, year, operatingSystem, price}) => {
+        array.forEach(({ id, brand, model, year, operatingSystem, price }) => {
             cards.innerHTML += `
                 <div class="card">
                     <div class="image">
@@ -67,20 +67,22 @@ function ShowFavs(array) {
                 })
             });
             let addBasket = document.querySelectorAll(".addBasket");
-        addBasket.forEach(basket => {
-            basket.addEventListener("click", () => {
-                let basketId = basket.getAttribute("data-id");
-                GetElementById(localHostUrl+"users", userId).then(res => {
-                    const data = res.data;
-                    if (data.baskets.includes(basketId)) {
-                        alert("siz bu mehsulu sebete elave elemisiz");
-                    } else {
-                        data.baskets.push(basketId);
-                        UpdateElement(localHostUrl+"users", userId, data).then(() => {})
-                    }
+            addBasket.forEach(basket => {
+                basket.addEventListener("click", () => {
+                    let basketId = basket.getAttribute("data-id");
+                    GetElementById(localHostUrl + "users", userId).then(res => {
+                        const data = res.data;
+                        let x = data.baskets.find(phone => phone.id == basketId)
+                        if (x) {
+                            alert("siz bu mehsulu sebete elave elemisiz");
+                        } 
+                        else {
+                            data.baskets.push({ id: basketId, count: 1 });
+                            UpdateElement(localHostUrl + "users", userId, data).then(() => { })
+                        }
+                    })
                 })
             })
-        })
         });
     }
 }

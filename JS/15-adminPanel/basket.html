@@ -50,6 +50,10 @@
                 .heart {
                     color: #ff7777;
                 }
+
+                .homeLink {
+                    color: rgb(147, 147, 147);
+                }
             }
 
             button {
@@ -176,6 +180,14 @@
             <div class="navbar">
             </div>
             <div class="icons">
+                <a href="./main.html" class="homeLink">
+                    <svg class="home" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                        height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                        </path>
+                    </svg>
+                </a>
                 <!-- heart icon -->
                     <svg class="heart" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
                         height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
@@ -197,7 +209,26 @@
     <main>
         <h1>Phones in my Basket</h1>
         <div class="cards">
-    
+            <div class="card">
+                <div class="image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1169/1169615.png" alt="phone icon">
+                </div>
+                <div class="text">
+                    <h4>${brand}</h4>
+                    <h3>${model}, ${year}</h3>
+                    <p>${operatingSystem}</p>
+                    <h3>${price}$</h3>
+                </div>
+                <div class="icons">
+                    <span class="removeBasket" data-id="${id}">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="2.5em" width="2.5em" xmlns="http://www.w3.org/2000/svg"><path d="M17 10l-2 -6"></path><path d="M7 10l2 -6"></path><path d="M12 20h-4.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304l-.833 4.75"></path><path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M16 19h6"></path></svg>
+                        <span class="removeText">Remove from Basket</span>
+                    </span>
+                </div>
+                <div class="count">
+                    <span>+</span>
+                </div>
+            </div>
         </div>
     </main>
     
