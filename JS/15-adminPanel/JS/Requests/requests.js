@@ -49,3 +49,16 @@ export async function UpdateElement(url, id, updateData) {
         error
     }
 }
+
+// delete ile silme
+export async function DeleteElement(url, id) {
+    let data;
+    let error;
+
+    await axios.delete(`${url}/${id}`).then(res => data = res.data).catch(err => error = err);
+
+    return {
+        data,
+        error
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+        integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        * {
+            user-select: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0 20px 40px;
+        }
+
+        .addFormContainer {
+            border-radius: 20px;
+            padding: 30px;
+            background-color: rgb(179, 255, 255);
+            max-width: 1200px;
+            margin: 50px auto;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .addForm {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input {
+                    border: 1px solid #000;
+                    border-radius: 20px;
+                    font-size: 20px;
+                    padding: 10px;
+                    background-color: rgb(234, 252, 255);
+                }
+
+                button {
+                    border-radius: 20px;
+                    font-size: 20px;
+                    padding: 10px;
+                    color: #fff;
+                    background-color: rgb(0, 194, 0);
+                    max-width: 200px;
+                }
+            }
+        }
+
+        .editTable, th, td {
+            border: 1px solid rgb(96, 122, 57);
+            padding: 10px;
+        }
+        .editTable {
+            border-collapse: collapse;
+            background-color: rgb(207, 255, 224);
+            max-width: 1200px;
+            width: 100%;
+            margin: 0px auto;
+            font-size: 20px;
+
+            #editIcon {
+                color: rgb(73, 128, 255);
+            }
+            #deleteIcon {
+                color: red;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <!-- add form -->
+        <div class="addFormContainer">
+            <h1>Admin Add Form</h1>
+            <form class="addForm">
+                <input type="text" placeholder="Brand name" id="addBrand" required>
+                <input type="text" placeholder="Model name" id="addModel" required>
+                <input type="text" placeholder="Operating System" id="addOperatingSystem" required>
+                <input type="number" placeholder="Year" id="addYear" required>
+                <input type="number" placeholder="Price" id="addPrice" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <!-- edit table -->
+        <table class="editTable">
+            <thead>
+                <tr>
+                    <td><b>ID</b></td>
+                    <td><b>Brand</b></td>
+                    <td><b>Model</b></td>
+                    <td><b>Operating System</b></td>
+                    <td><b>Year</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Edit</b></td>
+                    <td><b>Delete</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
+
+
+
+    <script type="module" src="./JS/admin.js"></script>
+</body>
+
+</html>

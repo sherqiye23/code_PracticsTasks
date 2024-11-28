@@ -540,6 +540,30 @@
       "operatingSystem": "Android 7.0",
       "year": 2017,
       "price": 185
+    },
+    {
+      "brand": "iphone",
+      "model": "iphone 16",
+      "operatingSystem": "pro max",
+      "year": 2024,
+      "price": 3000,
+      "id": 64
+    },
+    {
+      "brand": "Redmi",
+      "model": "Note8",
+      "operatingSystem": "pro",
+      "year": 2017,
+      "price": 500,
+      "id": 65
+    },
+    {
+      "brand": "iphone",
+      "model": "iphone 15",
+      "operatingSystem": "pro max",
+      "year": 2023,
+      "price": 2000,
+      "id": 66
     }
   ]
 }
