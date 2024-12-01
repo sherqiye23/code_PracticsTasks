@@ -9,12 +9,75 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
         integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            user-select: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            box-sizing: border-box;
+        }
 
+        body {
+            padding: 0 20px 40px;
+        }
+
+        .editFormContainer {
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .editForm {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                input {
+                    border: 1px solid #000;
+                    border-radius: 20px;
+                    font-size: 20px;
+                    padding: 10px;
+                    background-color: rgb(210, 255, 229);
+                    &::placeholder {
+                        color: #363636;
+                    }
+                }
+
+                button {
+                    border-radius: 20px;
+                    font-size: 20px;
+                    padding: 10px;
+                    color: #fff;
+                    background-color: rgb(0, 194, 0);
+                    max-width: 200px;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
+    <!-- edit form -->
+    <div class="editFormContainer">
+        <h1>Admin Edit Form</h1>
+        <form class="editForm">
+            <input type="text" placeholder="Brand name" id="editBrand" required>
+            <input type="text" placeholder="Model name" id="editModel" required>
+            <input type="text" placeholder="Operating System" id="editOperatingSystem" required>
+            <input type="number" placeholder="Year" id="editYear" required>
+            <input type="number" placeholder="Price" id="editPrice" required>
+            <button type="submit">Edit</button>
+        </form>
+    </div>
 
 
     <script type="module" src="./JS/edit.js"></script>

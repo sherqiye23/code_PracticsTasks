@@ -123,11 +123,5 @@ function ShowProducts(array) {
                 window.location = "./details.html?id=" + cardElement.dataset.id;
             })
         })
-
-
     });
 }
-
-
-
-

@@ -43,8 +43,8 @@ function ShowPhonesInTable(array) {
                 <td>${year}</td>
                 <td>${price}</td>
                 <td style="text-align: center;">
-                    <a href="./edit.html?id="${id}">
-                    <svg id="editIcon" data-id="${id}" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <a href="./edit.html?id=${id}">
+                        <svg id="editIcon" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.2em" width="1.2em" xmlns="http://www.w3.org/2000/svg"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                     </a>
                 </td>
                 <td style="text-align: center;">
@@ -52,7 +52,21 @@ function ShowPhonesInTable(array) {
                 </td>
             </tr>
         `
+
+        let deleteIcons = document.querySelectorAll("#deleteIcon");
+        deleteIcons.forEach(deleteIcon => {
+            deleteIcon.addEventListener("click", () => {
+                let delId = deleteIcon.getAttribute("data-id");
+                deletePhone(delId)
+            })
+        });
+
     });
+}
+
+// delete function
+function deletePhone(id) {
+    DeleteElement(localHostUrl+"phones", id).then(() => {})
 }
 
 

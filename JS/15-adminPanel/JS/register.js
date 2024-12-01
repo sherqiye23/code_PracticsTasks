@@ -26,6 +26,7 @@ regForm.addEventListener("submit", (e) => {
             }
             PostElements(localHostUrl+"users", newUser).then(()=>{});
             alert("Siz uğurla qeydiyyatdan keçdiz!");
+            window.location = "./login.html"
         }
         
     })
