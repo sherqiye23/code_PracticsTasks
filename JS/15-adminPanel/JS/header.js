@@ -1,7 +1,9 @@
 import { localHostUrl } from "./baseurl.js";
 import { GetElementById, GetElements, UpdateElement } from "./Requests/requests.js";
 
+let adminLink = document.querySelector((".adminLink"));
 let userId = JSON.parse(localStorage.getItem("userInfo"));
+
 let navbar = document.querySelector(".navbar")
 let navHeart = document.querySelector(".heart");
 let navBasket = document.querySelector(".basket")
@@ -26,12 +28,19 @@ export async function HeaderFunction() {
 }
 
 export async function GetLocalId() {
+    GetElementById(localHostUrl + "users", userId).then(res => {
+        const data = res.data;
+        if (data.isAdmin) {
+            adminLink.style.display = "block";
+        }
+    })
     if (!userId) {
         navbar.innerHTML = `
         <h1>You are not logged in!</h1>
         <button><a href="./login.html">Sign in!</a></button>
     `
     } else {
+
         GetElementById(localHostUrl + "users", userId).then(res => {
             const data = res.data;
             navbar.innerHTML = `
