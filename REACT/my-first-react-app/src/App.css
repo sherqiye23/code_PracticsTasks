@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+}
+
+.container {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+
+
+/* header */
+header {
+  .container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    .nav-logo {
+      font-size: 25px;
+    }
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        margin-right: 5px;
+        color: #818181;
+        text-decoration: none;
+      }
+      a:nth-child(1) {
+        margin-right: 5px;
+        color: #000;
+      }
+    }
+
+  }
+
+  .header-button {
+    transition: all .3s ease-in-out;
+    background-color: #fff;
+    border: 1px solid rgb(21, 23, 25);
+    padding: 8px 15px;
+    border-radius: 5px;
+
+    &:hover {
+      color: #fff;
+      background-color: rgb(21, 23, 25);
+    }
+  }
+}
+
+/* hero section */
+#hero {
+  background-color: rgb(41, 47, 52);
+
+  .container {
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    color: #fff;
+  }
+
+  .hero-parag {
+    font-size: 20px;
+    color: rgb(130, 134, 138);
+  }
+}
+
+.my-cards {
+  padding: 50px 0;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* footer */
+footer {
+  background-color: rgb(41, 47, 52);
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    color: #fff;
+  }
+}
+del{
+  text-decoration: line-through;
+}

@@ -316,12 +316,12 @@
       "price": 662
     },
     {
-      "id": 33,
       "brand": "Sagem",
       "model": "Sagem my900C",
       "operatingSystem": "Feature phone",
-      "year": 0,
-      "price": 1547
+      "year": "2020",
+      "price": "1547",
+      "id": 33
     },
     {
       "id": 34,

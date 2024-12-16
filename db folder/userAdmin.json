@@ -1,0 +1,39 @@
+{
+  "usersTable": [
+    {
+      "fullName": "seqi",
+      "email": "seqi@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "fullName": "fidan",
+      "email": "seqie@gmail.com",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "companiesTable": [
+    {
+      "name": "company",
+      "location": "company",
+      "password": "123",
+      "website": "133",
+      "id": 1
+    },
+    {
+      "name": "company33",
+      "location": "company",
+      "password": "123",
+      "website": "123",
+      "id": 2
+    },
+    {
+      "name": "gsgs",
+      "location": "gsg",
+      "password": "gssgs",
+      "website": "sgsgs",
+      "id": 3
+    }
+  ]
+}
