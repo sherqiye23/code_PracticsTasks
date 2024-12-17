@@ -79,7 +79,6 @@ function Elements() {
 
     }
   ]
-  console.log(products);
   
   return (
     <>
