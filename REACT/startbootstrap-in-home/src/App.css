@@ -50,7 +50,7 @@ header {
 
         .d-none-nav {
           z-index: 1;
-          display: none;
+          display: flex;
           position: absolute;
           top: 30px;
           left: 0;
@@ -100,8 +100,10 @@ header {
         background-color: #212529;
         color: #fff;
       }
+      display: flex;
+      gap: 10px;
 
-      .card-cart-btn {
+      .card-cart-btn, .plus, .minus, .reset {
         transition: all .3s ease;
         gap: 10px;
         display: flex;
