@@ -1,6 +1,7 @@
 *,
 *::after,
 *::before {
+  user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,8 +50,6 @@ header {
         }
 
         .d-none-nav {
-          z-index: 1;
-          display: flex;
           position: absolute;
           top: 30px;
           left: 0;
@@ -96,14 +95,19 @@ header {
     }
 
     .card-cart-wrap {
-      &:hover .card-cart-btn {
-        background-color: #212529;
-        color: #fff;
-      }
       display: flex;
       gap: 10px;
 
-      .card-cart-btn, .plus, .minus, .reset {
+      .card-cart-btn:hover {
+        background-color: #212529;
+        color: #fff;
+      }
+
+      .card-cart-btn,
+      .plus,
+      .minus,
+      .reset,
+      .theme {
         transition: all .3s ease;
         gap: 10px;
         display: flex;
@@ -135,14 +139,17 @@ header {
   color: #fff;
   padding: 80px 0;
   background-color: #212529;
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     .hero-title {
       font-size: 55px;
     }
+
     .hero-parag {
       font-size: 20px;
       color: #929292;
@@ -152,20 +159,26 @@ header {
 
 /* cards */
 #cards {
-  padding: 50px 0;
+  padding: 100px 0;
+
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
     .card {
       position: relative;
+
       .card-body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .card-title, .card-stars{
+
+        .card-title,
+        .card-stars {
           margin: 0;
         }
+
         .card-sale-text {
           background-color: #212529;
           color: #fff;
@@ -177,21 +190,35 @@ header {
           right: 10px;
           top: 10px;
         }
+
         .card-prices {
           margin-bottom: 50px;
+
           del {
             text-decoration: line-through;
             color: #929292;
           }
         }
+
         button {
           border: 1px solid #1e1e1e;
           position: absolute;
-          /* right: 10px; */
           bottom: 10px;
         }
       }
     }
   }
 }
-/*  */
+
+/* footer */
+footer {
+  color: #fff;
+  background-color: #212529;
+  padding: 40px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

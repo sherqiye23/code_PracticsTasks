@@ -10,7 +10,7 @@ export default function MyCard({name, stars, firstPrice, secondPrice, dis, butto
                 <Card.Img variant="top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" />
                 <Card.Body>
                     {/* title */}
-                    <Card.Title className='card-title'><h4>{name}name</h4></Card.Title>
+                    <Card.Title className='card-title'><h4>{name}</h4></Card.Title>
                     {/* stars */}
                     <Card.Text className='card-stars'>{stars ? <span>{stars}</span> : ""}</Card.Text>
                     {/* prices */}

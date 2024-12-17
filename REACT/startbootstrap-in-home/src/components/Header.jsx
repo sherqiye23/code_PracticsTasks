@@ -4,13 +4,17 @@ import { useState } from 'react';
 
 export default function Header() {
     let [count, setState] = useState(0);
-    // function linkClick() {
-    //     if (dNoneNav.style.display == "none") {
-    //         dNoneNav.style.display = "flex";
-    //     } else {
-    //         dNoneNav.style.display = "none";
-    //     }
-    // }
+    let [display, setDisplay] = useState("none");
+    
+    function linkClick(e) {
+        e.preventDefault();
+        if (display == "none") {
+            setDisplay("flex");
+        } else {
+            setDisplay("none");
+        }
+    }
+
     function handleMinus() {
         if (count > 0) {
             setState(--count);
@@ -25,6 +29,7 @@ export default function Header() {
         setState(0);
         
     }
+
     return (
         <>
             <header>
@@ -35,10 +40,10 @@ export default function Header() {
                             <a href="">Home</a>
                             <a href="">About</a>
                             <a href="">
-                                <span className="on-click-shop" >
+                                <span className="on-click-shop" onClick={(e) => linkClick(e)}>
                                     Shop <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
                                 </span>
-                                <div className="d-none-nav">
+                                <div className="d-none-nav" style={{display: display}}>
                                     <a href="">All Products</a>
                                     <a href="">Popular Items</a>
                                     <a href="">New Arrivals</a>
