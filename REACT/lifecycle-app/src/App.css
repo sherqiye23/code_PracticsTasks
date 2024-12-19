@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000083;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#edit-form {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  .closebtn {
+    background-color: palevioletred;
+    padding: 0px 15px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+#add-form, #edit-form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 40px;
+  input {
+  width: 100%;
+    border: 1px solid sienna;
+    padding: 5px 10px;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      border-width: 2px;
+    }
+  }
+  button {
+    background-color: rgb(70, 129, 83);
+    color: #fff;
+    padding: 5px 15px;
+  }
+}
+
+table {
+  width: 70%;
+  border: 2px solid orangered;
+  border-collapse: collapse;
+  tr:first-child {
+    td {
+      font-weight: 600;
+    }
+  }
+  td {
+    border: 1px solid orangered;
+    padding: 5px;
+  }
+}
+.loader-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  background: #25b09b;
+  box-shadow: 0 0 60px 15px #25b09b;
+  transform: translate(-80px);
+  clip-path: inset(0);
+  animation:
+    l4-1 0.5s ease-in-out infinite alternate,
+    l4-2 1s   ease-in-out infinite;
+}
+@keyframes l4-1 {
+  100% {transform: translateX(80px)}
+}
+@keyframes l4-2 {
+   33% {clip-path: inset(0 0 0 -100px)}
+   50% {clip-path: inset(0 0 0 0)     }
+   83% {clip-path: inset(0 -100px 0 0)}
+}
