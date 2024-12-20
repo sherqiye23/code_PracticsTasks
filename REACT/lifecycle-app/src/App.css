@@ -7,6 +7,9 @@
   border: none;
   text-decoration: none;
 }
+button {
+  cursor: pointer;
+}
 .overlay {
   height: 100vh;
   width: 100%;
@@ -23,9 +26,15 @@
   padding: 20px;
 }
 #edit-form {
-  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: fixed;
   z-index: 2;
   background-color: #fff;
+  &>* {
+    margin-bottom: 10px;
+  }
   .closebtn {
     background-color: palevioletred;
     padding: 0px 15px;

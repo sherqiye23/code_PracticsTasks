@@ -11,14 +11,39 @@ function App() {
   let [unitPrice, setUnitPrice] = useState();
   let [unitsInStock, setUnitsInStock] = useState();
   // form edit
+  let [eid, setEId] = useState();
   let [ename, setEName] = useState(name);
   let [eunitPrice, setEUnitPrice] = useState(unitPrice);
   let [eunitsInStock, setEUnitsInStock] = useState(unitsInStock);
   let [display, setDisplay] = useState("none");
 
   function EditData(id) {
+    setDisplay("block")
     console.log(id);
-    
+    let editData = data.find(elem => elem.id == id)
+    setEId(id);
+    setEName(editData.name)
+    setEUnitPrice(editData.unitPrice)
+    setEUnitsInStock(editData.unitsInStock)
+  }
+
+  function editformsubmit(e) {
+    e.preventDefault();
+    let newEditData = {
+      name: ename.trim(),
+      unitPrice: eunitPrice,
+      unitsInStock: eunitsInStock
+    }
+    axios.patch("https://northwind.vercel.app/api/products/"+eid, newEditData).then(res => {
+      console.log(res.data);
+      let updateData = data.map(elem => elem.id == eid ? res.data : elem);
+      console.log(updateData);
+      setData(updateData)
+    })
+    setEName("")
+    setEUnitPrice("")
+    setEUnitsInStock("")
+    setDisplay("none")
   }
 
   function formSubmit(e) {
@@ -74,13 +99,13 @@ function App() {
               <input type="number" value={unitsInStock} required placeholder='...unitsInStock' onChange={(e) => {setUnitsInStock(e.target.value)}}/>
               <button type='submit'>Add</button>
             </form>
-            <form id='edit-form' style={{display: display}}>
+            <form id='edit-form' style={{display: display}} onSubmit={(e) => {editformsubmit(e)}}>
               <h3>Edit</h3>
-              <input type="text" value={ename} required placeholder='...edit name' onChange={(e) => {setName(e.target.value)}}/>
-              <input type="number" value={eunitPrice} required placeholder='...edit unitPrice' onChange={(e) => {setUnitPrice(e.target.value)}}/>
-              <input type="number" value={eunitsInStock} required placeholder='...edit unitsInStock' onChange={(e) => {setUnitsInStock(e.target.value)}}/>
+              <input type="text" value={ename} required placeholder='...edit name' onChange={(e) => {setEName(e.target.value)}}/>
+              <input type="number" value={eunitPrice} required placeholder='...edit unitPrice' onChange={(e) => {setEUnitPrice(e.target.value)}}/>
+              <input type="number" value={eunitsInStock} required placeholder='...edit unitsInStock' onChange={(e) => {setEUnitsInStock(e.target.value)}}/>
               <button type='submit'>Edit</button>
-              <span className="closebtn">x</span>
+              <span style={{cursor:"pointer"}} className="closebtn" onClick={() => setDisplay("none")}>x</span>
             </form>
             <div className="overlay" style={{display: display}}></div>
             <table>
