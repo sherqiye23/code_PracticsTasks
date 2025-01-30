@@ -7,6 +7,7 @@ function Detail() {
     let [product, setProduct] = useState({})
     let { id } = useParams()
     let navigate = useNavigate()
+    
     async function GetData() {
         let result = await axios.get(`http://localhost:4000/products/${id}`)
         setProduct(result.data)
